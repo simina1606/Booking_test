@@ -12,7 +12,8 @@ import java.time.Duration;
 public class PositiveTests extends BaseTestClass {
     @Test
     public void positiveTests(){
-       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        //we are not using driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); because we already created a method for waits
+        //the wait method is used in every method in which we need to get, find, click or sendkeys
 
         HomePageObject homePageObject = new HomePageObject(driver);
         homePageObject.openHomePageBooking();
@@ -30,15 +31,19 @@ public class PositiveTests extends BaseTestClass {
         Assert.assertTrue("Register button not visible", registerPageObject.isRegisterButtonVisible());
 
         MyAccountPageObject myAccountPageObject = accountCreatedPageObject.clickMyAccountButton();
-        Assert.assertTrue("Incorrect page Url for Account Created", accountCreatedPageObject.getPageUrl());
+        String expectedUrlForAccountCreated = "http://138.68.69.185/";
+        Assert.assertEquals("Incorrect page Url for Account Created", expectedUrlForAccountCreated, accountCreatedPageObject.getPageUrl());
 
-        Assert.assertTrue("Incorrect Page Title on My Account Details", myAccountPageObject.getMyAccountPageTitle());
+        String expectedPageTitleMyAccount = "My Account Details";
+        Assert.assertEquals("Incorrect page title", expectedPageTitleMyAccount,myAccountPageObject.getMyAccountPageTitle());
 
         FavoritePageObject favoritePageObject = myAccountPageObject.clickOnFavoriteButton();
         favoritePageObject.getFavoritePageUrl();
         Assert.assertTrue("Logout button is not visible", favoritePageObject.isLogoutButtonVisible());
 
         HomePageObject homePageObject1 = favoritePageObject.clickLogoutButton();
+
+        driver.quit();
 
 
 
