@@ -12,6 +12,10 @@ public class HomePageObject extends BookingBasePageObject{
     private By loginLocator = By.xpath("//div[@class='hover-icon text-sm bg-emerald-500 p-2 rounded font-bold' and text()='Login']");
     private By registerLink = By.xpath("//div[@class = 'hover-icon text-sm bg-emerald-500 p-2 rounded font-bold' and text()='Register']");
 
+     public void openChromeBrowser(){
+        System.setProperty("webdriver.chrome.driver","C://Users//ACER//Downloads//chromedriver.exe");
+    }
+
     public void openHomePageBooking(){
         openUrl(pageUrl);
     }
