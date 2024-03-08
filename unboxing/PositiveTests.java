@@ -16,6 +16,7 @@ public class PositiveTests extends BaseTestClass {
         //the wait method is used in every method in which we need to get, find, click or sendkeys
 
         HomePageObject homePageObject = new HomePageObject(driver);
+        homePageObject.openChromeBrowser();
         homePageObject.openHomePageBooking();
 
         RegisterPageObject registerPageObject = homePageObject.clickRegister();
