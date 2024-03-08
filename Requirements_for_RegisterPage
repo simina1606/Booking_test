@@ -1,0 +1,59 @@
+‘Wantsome booking’ app offers a certain number of functionalities for both registered and
+unregistered users. An enhanced experience will be offered to the registered users, who will
+have access to the whole suite of functionalities, like reserving a room and managing their
+favorite list.
+In order to become registered, users have to go through a registering process, where they have
+to provide a series of personal details used to better tailor their experience on ‘Wantsome
+booking’.
+
+As an unregistered user, a ‘Register’ button will be visible on the header of the
+application and at the bottom of the content inside the landing page. Pressing that button
+will redirect users to the ‘Register’ page.
+The ‘Register’ page is split between two sections: ‘Login information’ and ‘Personal
+information’
+‘Login information’ section
+Every field inside this section is mandatory.
+First name (text field, mandatory field, accepts all types of characters, 30
+max characters);
+Last name (text field, mandatory field, accepts all types of characters, 30
+max characters)
+Email (mandatory field, validation of type {text}@{text}.{text}, 50 max
+characters)
+Password (mandatory field, validation is met if the following conditions are
+met: at least 8 characters, at least one uppercase letter, at least one
+lowercase letter, at least one number, at least one special character)
+Week: it used only one type of characters (numbers or letters)
+Medium: it used numbers and letters
+Strong: it used numbers, letters and special characters
+Re-type password (mandatory field, has to be the same value as the
+password, validation is met if the following conditions are met: at least 8
+characters, at least one uppercase letter, at least one lowercase letter, at
+least one number, at least one special character).
+‘Personal information’
+Every field inside this section is optional, excepting Date of birth
+Country (dropdown with a list of countries, optional field, clear icon for
+clearing the selected value). The list of countries: United Kingdom,
+Germany, Italy, Romania, China, United States, Canada, France, Japan,
+Other
+City (text field, optional field, 30 max characters)
+Address 1 (text field, optional field, 50 max characters)
+Address 2 (text field, optional field, 30 max characters)
+Date of birth (date picker field, optional field), format dd/mm/yyyy
+Gender (dropdown with Man / Woman / I prefer not to tell options,
+optional field). If 'I prefer not to tell option' is selected, nothing will be
+displayed on that field in the 'Account details' page of a logged in user.
+Nationality (text field, mandatory field, 30 characters max).
+A series of error messages will be presented to the user in case any of the validations
+are not met.
+For mandatory fields: “[Name of the field] should not be empty”
+For password: "Your password must contain at least 8 characters, one
+uppercase letter, one lowercase letter, one number and one special character)."
+For retype password: "Your passwords must match"
+For Email: "You must provide a valid email address."
+If the user is under 18 years old, a message will appear “You have to be over 18
+years in order to create an account”.
+For the rest of the mandatory fields: "You must complete this mandatory field."
+Under the register form, two buttons will appear:
+‘Cancel’ which redirects the user to the page they navigated from.
+‘Register’ which will redirect the user to the ‘Login’ page if every validation has
+been met or show an error if any of the validations have not been met.
